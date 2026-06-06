@@ -1,45 +1,36 @@
-# 🎫 DataStraw CRM — Customer Support Ticketing System
+# DataStraw CRM — Customer Support Ticketing System
 
-A full-stack web application for managing customer support tickets. Built as part of the Datastraw internship assessment.
+A full-stack web application for managing customer support tickets.
 
-**Live Demo**: [Coming soon — deployed on Render]
-
----
-
-## 🚀 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
 | **Frontend** | React 19 + Vite 6 |
 | **Backend** | Node.js + Express 4 |
 | **Database** | SQLite (via better-sqlite3) |
-| **Styling** | Vanilla CSS (dark theme, glassmorphism) |
+| **Styling** | Vanilla CSS |
 | **Deployment** | Render |
 
----
 
-## 📋 Features
+## Features
 
 ### Core Features
 1. **Create Tickets** — Submit tickets with customer name, email, subject, description, and priority
 2. **List All Tickets** — View all tickets with ID, name, title, status, priority, and date
-3. **Search Functionality** — Instant search across names, IDs, emails, subjects, and descriptions (300ms debounce)
+3. **Search Functionality** — Instant search across names, IDs, emails, subjects, and descriptions 
 4. **Filter by Status** — Filter tickets by Open, In Progress, or Closed with count badges
 5. **View & Update Tickets** — Detailed view with status updates and notes/comments system
 
 ### Bonus Features
-- 🔴🟡🟢 **Priority Levels** — High, Medium, Low with color-coded badges
-- 📝 **Notes System** — Add comments/notes to track ticket progress
-- 🔢 **Auto-generated Ticket IDs** — Sequential format: TKT-001, TKT-002, etc.
-- 📊 **Status Count Badges** — Real-time counts per status on the filter tabs
-- 🌙 **Premium Dark UI** — Modern glassmorphism design with smooth animations
-- 📱 **Fully Responsive** — Works on desktop, tablet, and mobile
+- **Priority Levels** — High, Medium, Low with color-coded badges
+- **Notes System** — Add comments/notes to track ticket progress
+- **Auto-generated Ticket IDs** — Sequential format: TKT-001, TKT-002, etc.
+- **Status Count Badges** — Real-time counts per status on the filter tabs
+- **Premium Dark UI** — Modern glassmorphism design with smooth animations
+- **Fully Responsive** — Works on desktop, tablet, and mobile
 
----
-
-## 🏗️ Architecture
-
-```
+## Architecture
 ┌─────────────────────────────────────────────────────┐
 │                   React Frontend                     │
 │        (Vite dev server / Express static)            │
@@ -64,13 +55,9 @@ A full-stack web application for managing customer support tickets. Built as par
 │         │   table      │ │    table     │           │
 │         └──────────────┘ └──────────────┘           │
 └─────────────────────────────────────────────────────┘
-```
 
----
+## Folder Structure
 
-## 📁 Folder Structure
-
-```
 CRM/
 ├── backend/
 │   ├── server.js          # Express entry point
@@ -99,67 +86,10 @@ CRM/
 ├── .gitignore
 ├── .env.example
 └── README.md
-```
 
----
 
-## 🛠️ Setup & Installation
 
-### Prerequisites
-- Node.js v18+ ([download](https://nodejs.org))
-- Git ([download](https://git-scm.com))
-
-### Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/YOUR_USERNAME/datastraw-crm.git
-   cd datastraw-crm
-   ```
-
-2. **Install backend dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Install frontend dependencies**
-   ```bash
-   cd frontend
-   npm install
-   cd ..
-   ```
-
-4. **Start the backend server** (Terminal 1)
-   ```bash
-   npm run dev
-   ```
-   Backend runs on `http://localhost:5000`
-
-5. **Start the frontend dev server** (Terminal 2)
-   ```bash
-   cd frontend
-   npm run dev
-   ```
-   Frontend runs on `http://localhost:5173`
-
-6. **Open your browser** and go to `http://localhost:5173`
-
-### Production Build
-
-```bash
-# Build the frontend
-cd frontend
-npm run build
-cd ..
-
-# Start the production server (serves both API + frontend)
-npm start
-```
-Then visit `http://localhost:5000`
-
----
-
-## 📡 API Endpoints
+## API Endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
@@ -205,9 +135,7 @@ Content-Type: application/json
 # Response: { "success": true, "updated_at": "..." }
 ```
 
----
-
-## 🗄️ Database Schema
+## Database Schema
 
 ### tickets
 | Column | Type | Description |
@@ -231,19 +159,15 @@ Content-Type: application/json
 | note_text | TEXT | Comment content |
 | created_at | TEXT | ISO timestamp |
 
----
-
-## 🎨 Design Decisions
+## Design Decisions
 
 - **SQLite** — Zero configuration database, perfect for a self-contained app. No external DB server needed.
 - **better-sqlite3** — Synchronous SQLite driver for Node.js, faster and simpler than async alternatives.
-- **Vanilla CSS** — No CSS framework dependency. Full control over the premium dark theme design.
+- **Vanilla CSS** — No CSS framework dependency. 
 - **Vite** — Lightning-fast dev server with hot module replacement.
 - **Single-server deployment** — Express serves both the API and the React build in production, simplifying deployment.
 
----
-
-## 🔄 SDLC Model
+## SDLC Model
 
 **Agile (3 Sprints)**
 
@@ -252,28 +176,3 @@ Content-Type: application/json
 | 1 | Backend | Working REST API + SQLite DB |
 | 2 | Frontend | React UI connected to API |
 | 3 | Polish + Deploy | Production build, Render deployment |
-
----
-
-## 📦 Deployment (Render)
-
-1. Push code to GitHub
-2. Create a new **Web Service** on [render.com](https://render.com)
-3. Connect your GitHub repo
-4. Set:
-   - **Build Command**: `cd frontend && npm install && npm run build && cd .. && npm install`
-   - **Start Command**: `npm start`
-   - **Environment**: Node
-5. Deploy — your app will be live!
-
----
-
-## 👤 Author
-
-Built for the Datastraw Internship Assessment.
-
----
-
-## 📄 License
-
-ISC
