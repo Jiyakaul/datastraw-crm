@@ -1,4 +1,4 @@
-# DataStraw CRM — Customer Support Ticketing System
+# DataStraw CRM: Customer Support Ticketing System
 
 A full-stack web application for managing customer support tickets.
 
