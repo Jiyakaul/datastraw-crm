@@ -1,0 +1,19 @@
+{
+  "name": "datastraw-crm",
+  "version": "1.0.0",
+  "description": "Customer Support Ticketing CRM — Datastraw Assessment",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node --watch backend/server.js"
+  },
+  "keywords": ["crm", "ticketing", "support", "nodejs", "express", "sqlite"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^11.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "uuid": "^10.0.0"
+  }
+}
